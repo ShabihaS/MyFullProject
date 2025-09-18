@@ -289,7 +289,7 @@ namespace MovieAPIDemo.Controllers
                     .Parse(imageFile.ContentDisposition)
                     .FileName.Trim('"');
 
-                string newPath = @"D:\Image";
+                string newPath = @"D:\MyFullProject\MovieAPIDemo";
                 if (!Directory.Exists(newPath))
                 {
                     Directory.CreateDirectory(newPath);
