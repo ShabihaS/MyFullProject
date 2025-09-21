@@ -1,4 +1,6 @@
-﻿namespace MovieAPIDemo.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace MovieAPIDemo.Entities
 {
     public class Person
     {
@@ -9,6 +11,7 @@
 
         public DateTime DateOfBirth { get; set; }
 
+        [JsonIgnore]
         public ICollection<Movie> Movies { get; set; }
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;

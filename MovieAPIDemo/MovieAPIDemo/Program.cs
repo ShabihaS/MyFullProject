@@ -4,7 +4,7 @@ using MovieAPIDemo.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container.test
 builder.Services.AddDbContext<MovieDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
                    .AllowAnyHeader();
         });
 });
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -38,7 +38,7 @@ app.UseHttpsRedirection();
 app.UseRouting();
 app.UseStaticFiles(new StaticFileOptions
 {
-    FileProvider = new PhysicalFileProvider(@"D:\Image"),
+    FileProvider = new PhysicalFileProvider(@"D:\MyFullProject\MovieAPIDemo"),
     RequestPath = "/StaticFiles"
 });
 app.UseAuthorization();
